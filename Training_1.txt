@@ -1,0 +1,61 @@
+Database
+-----------
+A database in software is a structured collection of data that is organized, stored, 
+and managed in a way that allows for efficient retrieval, manipulation, and querying of information. 
+It serves as a central repository for storing and managing data used by various applications, systems, or users. 
+Databases are essential components of most software applications, especially those that involve handling substantial amounts of data.
+
+Here are some key concepts related to databases in software:
+
+Data Management: Databases provide a systematic way to store and manage data. They ensure data integrity, security, and consistency by 
+enforcing rules and constraints.
+
+Structured Format: Data is organized into structured formats, usually tables (also known as relations), rows, and columns. 
+Each row represents a record, while columns define the attributes or fields of the data.
+
+-----------------------------------
+
+There are several types of databases, each designed to serve specific purposes and address different data storage and retrieval needs. 
+Here are some of the most common types of databases:
+
+
+Relational Databases (RDBMS): Relational databases use structured tables with rows and columns to store and manage data. They ensure data integrity and support complex querying through the use of SQL (Structured Query Language). Examples include MySQL, PostgreSQL, Oracle Database, and Microsoft SQL Server.
+
+NoSQL Databases: NoSQL (Not Only SQL) databases are designed to handle large volumes of unstructured or semi-structured data. They are more flexible and scalable than relational databases and are suitable for applications like real-time analytics, content management, and social media. Types of NoSQL databases include:
+
+These are just some of the most common types of databases, and there are many other specialized databases catering to specific needs. The choice of database type depends on factors such as the nature of the data, the application's requirements, scalability needs, and performance considerations.
+-----------------------------------------
+
+SQL Server Management Studio (SSMS) is a software application developed by Microsoft that provides 
+an integrated environment for managing Microsoft SQL Server databases. It is a powerful tool used by database administrators, developers, 
+and other professionals to perform various tasks related to SQL Server databases.
+
+Now, let's go to create database and few tables.
+
+create database Employeemanagement;
+
+Create table departments(
+Id int identity(1,1) primary key,
+depName varchar(10) unique not null,
+createdAt date default getdate()
+);
+
+insert into departments(depName) values ('ITE');
+select depName,Id from departments where Id = 5;
+update departments set depName='IT' where Id = 5;
+
+create table employees(
+employeeId int identity(1,1) primary key,
+employeeName varchar(20) not null,
+employeeEmail varchar(20) unique not null,
+depId int foreign key references departments(Id),
+createdAt datetime default getdate(),
+isactive int default 1
+);
+insert into employees(employeeName,employeeEmail,depId) values ('Sai','sai@gmail.com',3);
+
+update employees set employeeName='Ram Raju' where employeeId=3;
+
+select emp.employeeName,emp.employeeEmail,dep.depName from employees as emp
+inner join departments as dep on emp.depid = dep.id order by dep.Id desc;
+
