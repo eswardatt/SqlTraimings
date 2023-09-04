@@ -1,0 +1,5 @@
+Task : 1
+------------
+Create a table customers and create a view to fetch the data and update the data.
+
+Create a stored procedure to update customer contact .
