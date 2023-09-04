@@ -86,6 +86,3 @@ as
  begin
    insert into Customers(CustomerID, CustomerName, ContactName, Country) values (@id,@name,@contact,@country)
  end
- 
- 
- 
