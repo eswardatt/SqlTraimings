@@ -1,0 +1,19 @@
+Scalar UDF for Calculations:
+Create a scalar UDF in a database of your choice. Design the UDF to accept two parameters 
+(e.g., numeric values) and return the result of a specific mathematical operation (e.g., addition, subtraction, multiplication, or division). 
+Use this UDF to perform calculations in SQL queries.
+
+String Manipulation UDF:
+Develop a scalar UDF that takes a string as input and returns a modified version of the string. 
+You can choose to implement functionality like reversing the string, converting it to uppercase, 
+or removing special characters. Use this UDF to transform strings in your database.
+
+Date and Time UDF:
+Create a scalar UDF that accepts a date as input and calculates the age of a person based on the input date. 
+Use this UDF to query a table of individuals' birthdates and display their ages.
+
+Table-Valued Function (TVF) Assignments:
+
+TVF for Employee Information:
+Design a TVF that accepts an employee ID as a parameter and returns a table with information about the employee, 
+including their name, department, and job title. Implement this TVF to retrieve employee details from an employee table.
