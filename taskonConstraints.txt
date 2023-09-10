@@ -1,0 +1,34 @@
+Primary Key Constraint Assignment:
+---------------------------------------------
+Create a database schema for a library management system. Design a table for storing information about books. 
+Define a primary key constraint for the table. Populate the table with sample data, 
+ensuring that the primary key constraint is enforced.
+
+
+Foreign Key Constraint Assignment:
+---------------------------------------------
+Extend the library management system schema from the previous assignment. 
+Create a new table for storing information about library members. 
+Define a foreign key constraint between the book table and the member table, 
+representing the books borrowed by members. Populate both tables with sample data and 
+demonstrate the use of foreign key constraints in maintaining data integrity.
+
+Unique Constraint Assignment:
+---------------------------------------------
+Design a database schema for an e-commerce platform. Create a table to store product information. 
+Define a unique constraint on the product code to ensure that each product has a unique identifier. 
+Insert sample products into the table, including duplicate product codes, and observe how the unique constraint prevents duplicates.
+
+Check Constraint Assignment:
+----------------------------------------
+Imagine you are building a database for a university to track student records. 
+Create a table for student information and include a check constraint that ensures the age of a student is between 18 and 60 years old. 
+Insert sample student records, including some that violate the check constraint, and demonstrate how the check constraint works.
+
+Default Constraint Assignment:
+----------------------------------------
+Develop a database for a customer management system for a retail store. 
+Create a table to store customer information and include a default constraint that sets 
+the country of a customer to "USA" if not specified during data insertion. 
+Insert sample customer records without specifying a country and verify that the default constraint sets the value correctly.
+
